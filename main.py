@@ -1,6 +1,6 @@
 import os, shutil
 
-path = "C:/Users/swaru"
+path = os.path.expanduser("~") 
 d = os.path.join(path, "Downloads")
 
 categories = {
@@ -36,3 +36,4 @@ for i in os.listdir(d):
         os.makedirs(tfolder1, exist_ok=True)
         shutil.move(file_path, os.path.join(tfolder1, i))
         print(f"Moved {i} to Others")
+
